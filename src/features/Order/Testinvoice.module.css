@@ -1,0 +1,339 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&display=swap");
+.p,
+.div {
+  margin-top: 0;
+  line-height: 1.5em;
+}
+
+.main {
+  color: #777777;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.5em;
+  overflow-x: hidden;
+}
+
+.p {
+  margin-bottom: 15px;
+}
+
+.img {
+  border: 0;
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+.b {
+  font-weight: bold;
+}
+.table {
+  width: 100%;
+  caption-side: bottom;
+  border-collapse: collapse;
+}
+
+.th {
+  text-align: left;
+}
+
+.td {
+  border-top: 1px solid #eaeaea;
+}
+
+.td,
+.th {
+  padding: 10px 15px;
+  line-height: 1.55em;
+}
+.csF16 {
+  font-size: 16px;
+}
+
+.csSemi_bold {
+  font-weight: 600;
+}
+
+.csBold {
+  font-weight: 700;
+}
+
+.csM0 {
+  margin: 0px;
+}
+
+.csMb0 {
+  margin-bottom: 0px;
+}
+
+.csMb5 {
+  margin-bottom: 5px;
+}
+
+.csMb10 {
+  margin-bottom: 10px;
+}
+
+.csMb25 {
+  margin-bottom: 25px;
+}
+
+.csMb30 {
+  margin-bottom: 30px;
+}
+
+.csWidth_1 {
+  width: 8.33333333%;
+}
+
+.csWidth_2 {
+  width: 16.66666667%;
+}
+
+.csWidth_3 {
+  width: 25%;
+}
+
+.csWidth_4 {
+  width: 33.33333333%;
+}
+
+.csPrimary_color {
+  color: #111111;
+}
+
+.csFocus_bg {
+  background: #f6f6f6;
+}
+
+.csContainer {
+  max-width: 880px;
+  padding: 30px 15px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #777;
+  font-weight: 600;
+}
+
+.csText_right {
+  text-align: right;
+}
+
+.csBorder_top_0 {
+  border-top: 0;
+}
+
+.csBorder_top {
+  border-top: 1px solid #eaeaea;
+}
+
+.csBorder_left {
+  border-left: 1px solid #eaeaea;
+}
+
+.csRound_border {
+  border: 1px solid #eaeaea;
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+.csBorder_none {
+  border: none;
+}
+
+.csInvoice.csStyle1 {
+  background: #fff;
+  border-radius: 10px;
+  padding: 50px;
+}
+
+.csInvoice.csStyle1 .csInvoice_head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.csInvoice.csStyle1 .csInvoice_head.csType1 {
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.csInvoice.csStyle1 .csInvoice_footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.csInvoice.csStyle1 .csInvoice_footer table {
+  margin-top: -1px;
+}
+
+.csInvoice.csStyle1 .csLeft_footer {
+  width: 55%;
+  padding: 10px 15px;
+}
+
+.csInvoice.csStyle1 .csRight_footer {
+  width: 46%;
+}
+
+.csInvoice.csStyle1 .csNote {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  margin-top: 40px;
+}
+
+.csInvoice.csStyle1 .csNote_left {
+  margin-right: 10px;
+  margin-top: 6px;
+  margin-left: -5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 32px;
+}
+
+.csInvoice.csStyle1 .csInvoice_left {
+  max-width: 55%;
+}
+
+.csInvoice_btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.csInvoice_btns .csInvoice_btn:firstchild {
+  border-radius: 5px 0 0 5px;
+}
+
+.csInvoice_btns .csInvoice_btn:lastchild {
+  border-radius: 0 5px 5px 0;
+}
+
+.csInvoice_btn {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: none;
+  font-weight: 600;
+  padding: 24px 48px;
+  cursor: pointer;
+  background: #b50000;
+  color: #fff;
+  border-radius: 4px;
+  margin: 2rem;
+}
+
+.csInvoice_btn svg {
+  width: 24px;
+  margin-right: 5px;
+}
+
+.csInvoice_btn.csColor1 {
+  color: #111111;
+  background: rgba(42, 209, 157, 0.15);
+}
+
+.csInvoice_btn.csColor1:hover {
+  background-color: rgba(42, 209, 157, 0.3);
+}
+
+.csInvoice_btn.csColor2 {
+  color: #fff;
+  background: #2ad19d;
+}
+
+.csInvoice_btn.csColor2:hover {
+  background-color: rgba(42, 209, 157, 0.8);
+}
+
+.csTable_responsive {
+  overflow-x: auto;
+}
+
+.csTable_responsive > table {
+  min-width: 600px;
+}
+
+.csBox2_wrap {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 30px;
+  list-style: none;
+  padding: 0;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.csBox.csStyle2 {
+  border: 1px solid #eaeaea;
+  padding: 25px 30px;
+  border-radius: 5px;
+}
+
+@media print {
+  .cs-hide_print {
+    display: none !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .csMobile_hide {
+    display: none;
+  }
+  .csInvoice.csStyle1 {
+    padding: 30px 20px;
+  }
+  .csInvoice.csStyle1 .csRight_footer {
+    width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  .csInvoice.csStyle1 .csLogo {
+    margin-bottom: 10px;
+  }
+  .csInvoice.csStyle1 .csInvoice_head {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .csInvoice.csStyle1 .csInvoice_head.csType1 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+  }
+  .csInvoice.csStyle1 .csInvoice_head .csText_right {
+    text-align: left;
+  }
+  .csBox2_wrap {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .csInvoice.csStyle1 .csInvoice_left {
+    max-width: 100%;
+  }
+}

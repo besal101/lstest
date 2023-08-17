@@ -1,0 +1,284 @@
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["fullTextSearch", "fullTextIndex"]
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Account {
+  id                String  @id @default(cuid())
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String? @db.Text
+  access_token      String? @db.Text
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String? @db.Text
+  session_state     String?
+  user              User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+  @@index([userId], map: "Account_userId_fkey")
+}
+
+model User {
+  id               String       @id @default(cuid())
+  name             String
+  email            String?      @unique
+  emailVerified    DateTime?
+  image            String?
+  password         String?
+  role             String       @default("user")
+  birthdate        DateTime?
+  createdAt        DateTime     @default(now())
+  updatedAt        DateTime     @updatedAt
+  mobile           String?      @unique
+  mobileVerified   DateTime?
+  language         String?      @default("en")
+  shareDataConsent Boolean      @default(true)
+  cookiesConsent   Boolean      @default(true)
+  accounts         Account[]
+  address          Address[]
+  categories       Category[]
+  products         Product[]
+  carts            Cart[]
+  orders           Order[]
+  smilePoint       SmilePoint[]
+}
+
+model SmilePoint {
+  id           Int         @id @default(autoincrement())
+  userId       String      @unique
+  user         User        @relation(fields: [userId], references: [id])
+  currentPoint Int?        @default(100)
+  createdAt    DateTime    @map("createdAt")
+  updatedAt    DateTime    @updatedAt @map("updatedAt")
+  pointsLog    PointsLog[]
+}
+
+model PointsLog {
+  id           Int        @id @default(autoincrement())
+  smilePointId Int
+  smilePoint   SmilePoint @relation(fields: [smilePointId], references: [id])
+  message      String
+  points       Int
+  date         DateTime   @default(now())
+}
+
+model VerificationToken {
+  identifier String
+  token      String   @unique
+  expires    DateTime
+
+  @@unique([identifier, token])
+}
+
+enum AddressType {
+  Work
+  Home
+}
+
+model Address {
+  id        String      @id @default(cuid())
+  userId    String
+  user      User        @relation(fields: [userId], references: [id])
+  apartment String
+  address   String
+  city      String?
+  country   String
+  latitude  Float?
+  longitude Float?
+  phone     String
+  fullname  String
+  type      AddressType @default(Home)
+  isDefault Boolean     @default(true)
+  createdAt DateTime    @default(now())
+  updatedAt DateTime    @default(now()) @updatedAt
+
+  orders Order[] @relation("Address")
+
+  @@index([userId], map: "Address_userId_fkey")
+}
+
+model Order {
+  id             String        @id @default(cuid())
+  userId         String?
+  user           User?         @relation(fields: [userId], references: [id])
+  status         String        @default("pending")
+  shippingid     String?
+  address        Address?      @relation("Address", fields: [shippingid], references: [id])
+  invoiceNumber  Int
+  subtotal       Float
+  shippingCharge Float
+  totalAmount    Float
+  cartId         String?
+  cart           Cart?         @relation(fields: [cartId], references: [id])
+  currency       String
+  reedemedPoints Float?
+  PointsAmount   Float?
+  orderStatus    OrderStatus[]
+  paymentStatus  String?       @default("pending")
+  paymentType    String?       @default("cash")
+  discount       Float?        @default(0)
+  couponId       Int?
+  coupon         Coupon?       @relation(fields: [couponId], references: [id])
+  couponCode     String?
+  customerNotes  String?
+  userAgent      String?
+  source         String?
+  createdAt      DateTime      @default(now())
+  updatedAt      DateTime      @updatedAt
+}
+
+model OrderStatus {
+  id        String   @id @default(cuid())
+  orderId   String
+  order     Order    @relation(fields: [orderId], references: [id])
+  status    String
+  createdAt DateTime @default(now())
+}
+
+model Category {
+  id               Int        @id @default(autoincrement())
+  name             String
+  slug             String     @unique
+  arName           String?
+  ruName           String?
+  image            String
+  title            String?
+  description      String?
+  parentCategoryId Int?
+  published        Boolean    @default(true)
+  createdById      String
+  createdAt        DateTime   @default(now())
+  createdBy        User       @relation(fields: [createdById], references: [id])
+  parentCategory   Category?  @relation("Subcategories", fields: [parentCategoryId], references: [id])
+  subcategories    Category[] @relation("Subcategories")
+  products         Product[]
+
+  @@index([createdById], map: "Category_createdById_fkey")
+  @@index([parentCategoryId], map: "Category_parentCategoryId_fkey")
+}
+
+model Product {
+  id                Int                @id @default(autoincrement())
+  categoryId        Int
+  category          Category           @relation(fields: [categoryId], references: [id])
+  name              String
+  nameAr            String?
+  slug              String             @unique
+  published         Boolean            @default(true)
+  shortDesc         String             @db.LongText
+  shortDescAr       String?            @db.LongText
+  longDesc          String             @db.LongText
+  longDescAr        String?            @db.LongText
+  price             Float
+  discountPrice     Float?
+  badge             String?
+  mainImage         String             @db.VarChar(400)
+  quantity          Int
+  weightDimension   Json
+  weightDimensionAr Json?
+  specifications    Json
+  specificationsAr  Json?
+  metaTitle         String?            @db.LongText
+  metaDescription   String?            @db.LongText
+  metaKeywords      Json?
+  itemCode          String?
+  itemSeries        String?
+  variationType     String?
+  variations        ProductVariation[]
+  reviews           Review[]
+  createdAt         DateTime           @default(now())
+  updatedAt         DateTime           @updatedAt
+  createdById       String
+  createdBy         User               @relation(fields: [createdById], references: [id])
+  ProductVisit      ProductVisit[]
+
+  @@index([createdById], map: "Category_createdById_fkey")
+  @@fulltext([name, nameAr, shortDesc, shortDescAr, metaTitle, metaDescription])
+}
+
+model ProductVariation {
+  id         Int      @id @default(autoincrement())
+  product    Product  @relation(fields: [productId], references: [id])
+  productId  Int
+  name       String
+  colorImage String?
+  size       String?
+  price      Float
+  quantity   Int
+  itemCode   String   @unique
+  images     String?  @db.VarChar(400)
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+}
+
+model Review {
+  id        Int      @id @default(autoincrement())
+  product   Product  @relation(fields: [productId], references: [id])
+  productId Int
+  name      String
+  content   String
+  rating    Int
+  createdAt DateTime @default(now())
+}
+
+model Keyword {
+  id   Int    @id @default(autoincrement())
+  name String @unique
+
+  @@fulltext([name])
+}
+
+model ProductVisit {
+  id            Int      @id @default(autoincrement())
+  productId     Int
+  product       Product  @relation(fields: [productId], references: [id])
+  visitCount    Int
+  lastVisitedAt DateTime
+  userIP        String
+
+  @@unique([productId, userIP])
+}
+
+model Cart {
+  id        String     @id @default(cuid())
+  userId    String
+  user      User       @relation(fields: [userId], references: [id])
+  cartItems CartItem[]
+  status    String
+  createdAt DateTime   @default(now())
+  updatedAt DateTime   @updatedAt
+  order     Order[]
+}
+
+model CartItem {
+  id              String @id @default(cuid())
+  cartId          String
+  cart            Cart   @relation(fields: [cartId], references: [id])
+  name            String
+  slug            String
+  currency        String
+  productCode     String
+  discountedPrice String
+  productImage    String
+  productQuantity Int    @default(1)
+}
+
+model Coupon {
+  id              Int      @id @default(autoincrement())
+  code            String   @unique
+  device          String
+  discountPercent Float
+  status          Boolean  @default(true)
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+  Order           Order[]
+}

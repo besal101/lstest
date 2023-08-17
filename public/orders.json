@@ -1,0 +1,418 @@
+[
+  {
+    "_id": "64895faee3eb8f0008544c48",
+
+    "user": {
+      "email": "fatima@gmail.com"
+    },
+    "totalAmount": 760,
+    "cartitems": {
+      "cartItems": [
+        {
+          "productCode": ["LIFE-NN-4"]
+        }
+      ]
+    }
+  },
+  {
+    "_id": "6488d9934fb48c0008cf8e94",
+    "subtotal": 821,
+    "shipping": 0,
+    "user": {
+      "email": "rawanaf2009@gmail.com"
+    },
+    "totalAmount": 797,
+
+    "cartitems": {
+      "cartItems": [
+        {
+          "productCode": ["NCK-66"]
+        },
+        {
+          "productCode": ["FLCM2HWOK-32C"]
+        },
+        {
+          "productCode": ["SPF2HWOK-32-C"]
+        },
+        {
+          "productCode": ["FLCMWOK-32B"]
+        },
+        {
+          "productCode": ["FLCMWOK-32C"]
+        },
+        {
+          "productCode": ["SPFCK-6-4-B"]
+        },
+        {
+          "productCode": ["SPFCK-6-4-C"]
+        }
+      ]
+    }
+  },
+  {
+    "_id": "648871f66a7db700089ad610",
+    "user": {
+      "email": "eman.alkinidi@gmail.com"
+    },
+    "cartitems": {
+      "cartItems": [
+        {
+          "productCode": ["KNOB-SPF-A"]
+        },
+        {
+          "productCode": ["P2NGL-28-A"]
+        }
+      ]
+    }
+  },
+  {
+    "_id": "6486cdec0052310008e7950c",
+    "user": {
+      "email": "mariam.alramthy@gmail.com"
+    },
+    "totalAmount": 1141,
+    "cartitems": {
+      "cartItems": [
+        {
+          "productCode": ["LIFE-NN-4"]
+        }
+      ]
+    }
+  },
+  {
+    "_id": "6486bc998726e20008bb5c29",
+    "subtotal": 534,
+    "shipping": 0,
+    "user": {
+      "email": "cust_07@lifesmile.me"
+    },
+    "userAgent": "android",
+    "cartitems": {
+      "cartItems": [
+        {
+          "productCode": ["FLCM-MIX-17-2-C"]
+        }
+      ]
+    }
+  },
+  {
+    "_id": "6485c5969c9871000808bb48",
+    "subtotal": 586,
+    "shipping": 0,
+    "user": {
+      "email": "eamy88@hotmail.com"
+    },
+    "cartitems": {
+      "cartItems": [
+        {
+          "productCode": ["NCK-36-GRAY"]
+        },
+        {
+          "productCode": ["SPFGL-24-A"]
+        },
+        {
+          "productCode": ["SPF3F-24-A"]
+        },
+        {
+          "productCode": ["FLCMWOK-32A"]
+        },
+        {
+          "productCode": ["SPFCK-6-3-A"]
+        },
+        {
+          "productCode": ["SPF-MIX-7-1-A"]
+        }
+      ]
+    }
+  },
+  {
+    "_id": "64856f45b56727000861f16d",
+    "user": {
+      "email": "cust_07@lifesmile.me"
+    },
+    "cartitems": {
+      "cartItems": [
+        {
+          "productCode": ["FLCMHP-30A"]
+        }
+      ]
+    }
+  },
+  {
+    "_id": "64856e068ead1b0008a96220",
+    "user": {
+      "email": "cust_07@lifesmile.me"
+    },
+    "cartitems": {
+      "cartItems": [
+        {
+          "productCode": ["LIFE-GP-12"]
+        },
+        {
+          "productCode": ["STA-6-2-B"]
+        }
+      ]
+    }
+  },
+  {
+    "_id": "64856d3648b30400087488b0",
+    "user": {
+      "email": "cust_07@lifesmile.me"
+    },
+
+    "cartitems": {
+      "cartItems": [
+        {
+          "productCode": ["FLCM-20P-GRAY"]
+        },
+        {
+          "productCode": ["FLCM-24P-GRAY"]
+        },
+        {
+          "productCode": ["FLCM-28P-GRAY"]
+        },
+        {
+          "productCode": ["FLCMSHR32-BLUE"]
+        },
+        {
+          "productCode": ["FLCM-32P-GRAY"]
+        }
+      ]
+    },
+    "orderStatus": [
+      {
+        "type": "ordered",
+        "_id": "64856d3648b30400087488b1",
+        "date": "2023-06-11T06:44:06.044Z"
+      },
+      {
+        "type": "processing",
+        "date": "2023-06-13T13:31:38.054Z",
+        "_id": "64886fbac2c131e25510a287"
+      }
+    ],
+    "shippingid": {
+      "_id": "6305c6ba5d2a06000912ea58",
+      "type": "primary",
+      "country": "AE",
+      "street": "النهده برج التعاون ",
+      "apartment": "الدور 12",
+      "mobile": 568728544,
+      "fullname": "Um Ahmad ",
+      "userid": {
+        "_id": "6305c6896599dc000903280b",
+        "language": "en",
+        "role": "user",
+        "firstname": "um",
+        "lastname": "ahmad",
+        "email": "cust_07@lifesmile.me",
+        "createdAt": "2022-08-24T06:34:49.258Z",
+        "__v": 0
+      },
+      "city": "Sharjah",
+      "createdAt": "2022-08-24T06:35:38.649Z",
+      "updatedAt": "2023-05-31T18:31:34.351Z",
+      "__v": 0
+    },
+    "status": "completed",
+    "createdAt": "2023-06-11T06:44:06.052Z",
+    "updatedAt": "2023-06-13T13:31:38.054Z",
+    "invoiceNumber": 10805,
+    "__v": 0
+  },
+  {
+    "_id": "6482c32fbad6300008ebd81b",
+    "user": {
+      "email": "fahima@gmail.com"
+    },
+    "cartitems": {
+      "user": {
+        "email": "fahima@gmail.com"
+      },
+      "cartItems": [
+        {
+          "productCode": ["SPFLC-L-24"]
+        },
+        {
+          "productCode": ["SPFLC-L-28"]
+        }
+      ]
+    }
+  },
+  {
+    "_id": "6482bd1976735e0008577c3c",
+
+    "user": {
+      "email": "salim.alsharji@gmail.com"
+    },
+    "cartitems": {
+      "_id": "6482bc848ac4f2000859aaf8",
+      "status": "completed",
+      "user": {
+        "email": "salim.alsharji@gmail.com"
+      },
+      "cartItems": [
+        {
+          "productCode": ["LIFEP5MIX-10-1-C"]
+        },
+        {
+          "productCode": ["LIFEP5MIX-10-1-B"]
+        }
+      ]
+    }
+  },
+  {
+    "_id": "64818b69d4cf8e0008adf114",
+    "subtotal": 211,
+    "shipping": 0,
+    "user": {
+      "email": "sharing.fayz@gmail.com"
+    },
+
+    "cartitems": {
+      "cartItems": [
+        {
+          "productCode": ["P7F14-RED"]
+        },
+        {
+          "productCode": ["FLCM-MIX-7-1-B"]
+        }
+      ]
+    }
+  },
+  {
+    "_id": "6480c98eba5aa00008f0b20d",
+    "subtotal": 581,
+    "shipping": 0,
+    "user": {
+      "email": "khalidmusheer@gmail.com"
+    },
+    "cartitems": {
+      "cartItems": [
+        {
+          "productCode": ["FLCM-MIX-22-1-B"]
+        }
+      ]
+    }
+  },
+  {
+    "_id": "648085027fc1680009a9475f",
+
+    "user": {
+      "email": "shahramfakhari5@gmail.com"
+    },
+    "cartitems": {
+      "cartItems": [
+        {
+          "productCode": ["LIFE-GP-24"]
+        },
+        {
+          "productCode": ["LIFE-GP-14"]
+        },
+        {
+          "productCode": ["SPF2HWOK-28-A"]
+        },
+        {
+          "productCode": ["LIFESS-7"]
+        },
+        {
+          "productCode": ["FLCMFI42S-A"]
+        }
+      ]
+    }
+  },
+  {
+    "_id": "648053ea8214fd0008e89574",
+
+    "user": {
+      "email": "samira@gmail.com"
+    },
+    "cartitems": {
+      "cartItems": [
+        {
+          "productCode": ["FLCMHP-32-B"]
+        }
+      ]
+    }
+  },
+  {
+    "_id": "647f383ddafc5a000874d584",
+    "user": {
+      "email": "leena.mohammad@gmail.com"
+    },
+    "cartitems": {
+      "cartItems": [
+        {
+          "productCode": ["LIFE-NN-3"]
+        }
+      ]
+    }
+  },
+  {
+    "_id": "647f255a5de40b0009bb48d1",
+    "user": {
+      "email": "neginn.joharian@yahoo.com"
+    },
+    "cartitems": {
+      "cartItems": [
+        {
+          "productCode": ["P7F14-GRAY"]
+        },
+        {
+          "productCode": ["STA-24P-D"]
+        },
+        {
+          "productCode": ["SPF5F-28-A"]
+        }
+      ]
+    }
+  },
+  {
+    "_id": "647f22f0751f8500084171ef",
+    "user": {
+      "email": "um.samer@gmail.com"
+    },
+    "cartitems": {
+      "cartItems": [
+        {
+          "productCode": ["FLCM-MIX-10-1-A"]
+        }
+      ]
+    }
+  },
+  {
+    "_id": "647f067472b73d0008a0c503",
+    "subtotal": 357,
+    "shipping": 0,
+    "user": {
+      "email": "abdullahyusri67@gmail.gom"
+    },
+
+    "cartitems": {
+      "cartItems": [
+        {
+          "productCode": ["FLCM-40P-GRAY"]
+        },
+        {
+          "productCode": ["FLCMSS-3A"]
+        }
+      ]
+    }
+  },
+  {
+    "_id": "647dd51810d45700080d90fc",
+    "user": {
+      "email": "amalabuzinjal@hotmail.com"
+    },
+    "cartitems": {
+      "cartItems": [
+        {
+          "productCode": ["SPSF-32-A"]
+        },
+        {
+          "productCode": ["SPSF-36-A"]
+        }
+      ]
+    }
+  }
+]
